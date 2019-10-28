@@ -1,7 +1,20 @@
 <template>
     <div class="main">
         <div class="navs">
-            navs 导航菜单
+            <a-menu mode="horizontal" theme="dark">
+                <a-menu-item>
+                    <router-link to="/home">HOME</router-link>
+                </a-menu-item>
+                <a-menu-item>
+                    <router-link to="/team">TEAM</router-link>
+                </a-menu-item>
+                <a-menu-item>
+                    PHOTO
+                </a-menu-item>
+                <a-menu-item>
+                    TARGET
+                </a-menu-item>
+            </a-menu>
         </div>
         <div class="body">
             <router-view></router-view>
@@ -12,17 +25,23 @@
     </div>
 </template>
 
-<style scoped>
-    .navs , .footer{
+<script>
+    export default {}
+</script>
+
+<style>
+    .footer {
+        border-top: 1px solid black;
         text-align: center;
-        padding: .5em 0
     }
     .navs{
-        border-bottom: 1px solid black;
+        align-items: center;
     }
-
-    .footer{
-        border-top: 1px solid black;
+    .navs .ant-menu.ant-menu-horizontal.ant-menu-root.ant-menu-dark{
+        font-size: 25px;
+        text-align: center;
     }
-
+    .navs .ant-menu.ant-menu-item{
+        min-width:25px
+    }
 </style>
