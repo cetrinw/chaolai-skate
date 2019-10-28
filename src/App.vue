@@ -1,17 +1,28 @@
 <template>
-    <div class="home" v-loading="loading" align="center">
-        <Row align="top" flex>
-            <img src="./assets/home_top.png">
-            <h3>朝来板场</h3>
-            <p>IN LAIGUANGYING</p>
-            <p class="slogan">WECLOME TO CHAOLAI SKATEBOARD PARK</p>
-        </Row>
-        <a-button type="primary">PRIMARY</a-button>
+    <div class="main">
+        <div class="navs">
+            navs 导航菜单
+        </div>
+        <div class="body">
+            <router-view></router-view>
+        </div>
+        <div class="footer">
+            copyright by fox!
+        </div>
     </div>
 </template>
-<script>
-    export default {}
-</script>
 
-<style lang="scss" scoped>
+<style scoped>
+    .navs , .footer{
+        text-align: center;
+        padding: .5em 0
+    }
+    .navs{
+        border-bottom: 1px solid black;
+    }
+
+    .footer{
+        border-top: 1px solid black;
+    }
+
 </style>
